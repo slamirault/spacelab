@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    if highScore
+        h1 Hello #{highScore.name}!
+        p Your score is: #{highScore.score} Thanks for playing!
+    else
+        h1 There's no such highScore!
+
+    <form action="/highScore/all" method="get" style="display:inline">
+        <button type="submit">High Scores</button>
+    </form>
+
+    <form action="/" method="get" style="display:inline">
+        <button type="submit">Play Again</button>
+    </form>

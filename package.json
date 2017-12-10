@@ -1,0 +1,40 @@
+{
+  "name": "wtmbjs-4",
+  "version": "1.0.0",
+  "description": "Clone the repository:",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc ava --verbose",
+    "test-watch": "ava --verbose --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashersw/wtmbjs-4.git"
+  },
+  "author": "Armagan Amcalar <armagan@amcalar.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dashersw/wtmbjs-4/issues"
+  },
+  "homepage": "https://github.com/dashersw/wtmbjs-4#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "eslint": "^4.11.0",
+    "express": "^4.16.2",
+    "express-generator": "^4.15.5",
+    "express-validator": "^4.3.0",
+    "jquery": "^3.2.1",
+    "mongoose": "^4.13.1",
+    "mongoose-sequence": "^4.0.1",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "ava": "0.23.0",
+    "nyc": "^11.3.0",
+    "supertest": "^3.0.0"
+  },
+  "directories": {
+    "test": "test"
+  }
+}

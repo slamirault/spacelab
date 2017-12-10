@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1 Start Spacelab!
+    //***********************
+
+    <form action="/highScore/game" method="post">
+        <div class="input">
+            <label for="name">Nickname</label>
+            <input type="text" id="name" name="name">
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>

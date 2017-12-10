@@ -1,0 +1,46 @@
+extends layout
+
+block content
+
+    h3 Hello #{name}! Number of moves: <span id="numMoves" name="numMoves">0</span>
+    <span style="display:block; padding-bottom:10px">
+        <form action="/highScore/all" method="get" style="display:inline">
+            <button type="submit">High Scores</button>
+        </form>
+        <form action="/highScore" method="post" style="display:inline; padding-left:10px;">
+            <input id="score" name="score" hidden=true>
+            input(
+              type='text'
+              name='name'
+              id='name'
+              hidden
+              value=name
+            )
+            <button type="submit">End Game</button>
+        </form>
+    </span>
+
+    <canvas id="myCanvas" width="400" height="400" style="border:4px solid #c7eb7a;"></canvas>
+
+
+    <p>
+
+    <div id="hiddenImages" style="display:none;">
+        <img src="/images/png/Zeichenfläche 1.png" id="img1" alt="Zeichenfläche 1" title="Zeichenfläche 1" />
+        <img src="/images/png/Zeichenfläche 2.png" id="img2" alt="Zeichenfläche 2" title="Zeichenfläche 2" />
+        <img src="/images/png/Zeichenfläche 3.png" id="img3" alt="Zeichenfläche 3" title="Zeichenfläche 3" />
+        <img src="/images/png/Zeichenfläche 4.png" id="img4" alt="Zeichenfläche 4" title="Zeichenfläche 4" />
+        <img src="/images/png/Zeichenfläche 5.png" id="img5" alt="Zeichenfläche 5" title="Zeichenfläche 5" />
+        <img src="/images/png/Zeichenfläche 6.png" id="img6" alt="Zeichenfläche 6" title="Zeichenfläche 6" />
+        <img src="/images/png/Zeichenfläche 7.png" id="img7" alt="Zeichenfläche 7" title="Zeichenfläche 7" />
+        <img src="/images/png/Zeichenfläche 8.png" id="img8" alt="Zeichenfläche 8" title="Zeichenfläche 8" />
+        <img src="/images/png/Zeichenfläche 9.png" id="img9" alt="Zeichenfläche 9" title="Zeichenfläche 9" />
+        <img src="/images/png/Zeichenfläche 10.png" id="img10" alt="Zeichenfläche 10" title="Zeichenfläche 10" />
+        <img src="/images/png/Zeichenfläche 11.png" id="img11" alt="Zeichenfläche 11" title="Zeichenfläche 11" />
+    </div>
+    </p>
+
+
+
+    script(src="/scripts/jquery.min.js")
+    script(src='/scripts/spaceship.js')

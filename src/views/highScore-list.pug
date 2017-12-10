@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    h1 Hello!
+    if scores.length
+        p Here are the scores:
+        table
+            thead
+                td ID
+                td Name
+                td Score
+            each highScore in scores
+                tr
+                    td #{highScore.id}
+                    td #{highScore.name}
+                    td #{highScore.score}
+    else
+        p There's no one yet :(
+    script.
+        console.log(!{JSON.stringify(scores)})
+
+    <form action="/" method="get" style="display:inline">
+        <button type="submit">Play Again</button>
+    </form>

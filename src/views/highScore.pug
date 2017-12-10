@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1 The list of #{scores.length} the people in the world - siehste mal!!
+    each highScore in scores
+        p #{highScore.name}
+            strong #{highScore.age}
+            strong #{highScore.score}
